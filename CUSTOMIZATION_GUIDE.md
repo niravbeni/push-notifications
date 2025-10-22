@@ -15,12 +15,14 @@ All content is stored in `config/notifications.json`. This file contains 16 scen
       "userName": "Sarah Chen",
       "message": "Hey! Are you free for coffee tomorrow?",
       "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
-      "backgroundColor": "#1a1a2e",
+      "backgroundImage": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80",
       "appName": "WhatsApp"
     }
   }
 }
 ```
+
+**Note**: You can use either `backgroundImage` (for wallpapers) OR `backgroundColor` (for solid colors with gradient).
 
 ### Configuration Options
 
@@ -139,42 +141,84 @@ Change the seed to generate different avatars.
 
 ## Background Customization
 
-### Using Custom Background Images
+The app now supports **both wallpaper images and solid colors**!
 
-If you want to use actual wallpaper images instead of solid colors:
+### Option 1: Background Images (Wallpapers) - RECOMMENDED
 
-1. Edit `components/IOSHomeScreen.tsx`
+Use the `backgroundImage` field with any image URL:
 
-2. Find this section:
-```tsx
-<div
-  className="relative w-full h-screen overflow-hidden flex items-center justify-center"
-  style={{
-    background: `linear-gradient(135deg, ${config.backgroundColor} 0%, ${adjustBrightness(config.backgroundColor, 20)} 100%)`,
-  }}
->
-```
-
-3. Replace with:
-```tsx
-<div
-  className="relative w-full h-screen overflow-hidden flex items-center justify-center"
-  style={{
-    backgroundImage: `url(${config.backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
->
-```
-
-4. Update your JSON:
 ```json
-"backgroundImage": "/backgrounds/wallpaper1.jpg"
+"backgroundImage": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80"
 ```
 
-### Using Gradients
+**Image Sources:**
 
-Keep the current setup but customize colors in the JSON.
+1. **Unsplash** (Free, high quality):
+   - Browse: https://unsplash.com/
+   - Search for: "wallpaper", "gradient", "nature", "abstract"
+   - Right-click image → Copy Image Address
+   - Use URLs like: `https://images.unsplash.com/photo-xxxxx?w=800&q=80`
+
+2. **Local Images**:
+   ```json
+   "backgroundImage": "/wallpapers/my-image.jpg"
+   ```
+   Place images in `/public/wallpapers/` folder
+
+3. **Your Own Hosted Images**:
+   ```json
+   "backgroundImage": "https://your-domain.com/wallpaper.jpg"
+   ```
+
+**Best Practices:**
+- Use images around 800-1200px wide (optimized for mobile)
+- JPG format for photos, PNG for graphics
+- Avoid very busy images (text needs to be readable)
+- Dark or muted colors work best for visibility
+
+### Option 2: Solid Colors with Gradient
+
+Use `backgroundColor` instead of `backgroundImage`:
+
+```json
+"backgroundColor": "#1a1a2e"
+```
+
+This creates a gradient automatically!
+
+**Color Examples:**
+```json
+"backgroundColor": "#1a1a2e"  // Dark blue
+"backgroundColor": "#2d4a3e"  // Forest green  
+"backgroundColor": "#4a1a3e"  // Purple
+"backgroundColor": "#1a3a4a"  // Teal
+```
+
+### Finding Great Wallpapers
+
+**Recommended Unsplash Collections:**
+- Gradients: https://unsplash.com/s/photos/gradient
+- Abstract: https://unsplash.com/s/photos/abstract-wallpaper
+- Nature: https://unsplash.com/s/photos/nature-wallpaper
+- Minimal: https://unsplash.com/s/photos/minimal-wallpaper
+
+**Other Free Sources:**
+- Pexels: https://www.pexels.com/
+- Pixabay: https://pixabay.com/
+- iOS Wallpapers: Search "iPhone wallpapers" online
+
+### Adding Unsplash Images
+
+1. Go to https://unsplash.com/
+2. Search for your desired wallpaper
+3. Click on an image
+4. Right-click the image → "Copy Image Address"
+5. Paste into your JSON:
+   ```json
+   "backgroundImage": "https://images.unsplash.com/photo-..."
+   ```
+
+**Tip**: Add `?w=800&q=80` to the end of Unsplash URLs for optimized loading!
 
 ## Notification Timing
 

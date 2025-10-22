@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Wifi, Battery, Signal } from 'lucide-react';
+import { Wifi, Signal } from 'lucide-react';
 import NotificationBanner from './NotificationBanner';
 
 interface IOSHomeScreenProps {
@@ -9,7 +9,8 @@ interface IOSHomeScreenProps {
     userName: string;
     message: string;
     avatarUrl: string;
-    backgroundColor: string;
+    backgroundColor?: string;
+    backgroundImage?: string;
     appName: string;
   };
 }
@@ -49,7 +50,7 @@ export default function IOSHomeScreen({ config }: IOSHomeScreenProps) {
           // Audio autoplay is often blocked by browsers - this is expected
           console.log('Audio autoplay prevented (this is normal):', error);
         });
-      } catch (error) {
+      } catch {
         // Sound file not found - this is okay
         console.log('Notification sound not available (optional)');
       }
@@ -61,31 +62,48 @@ export default function IOSHomeScreen({ config }: IOSHomeScreenProps) {
     };
   }, []);
 
+  // Determine background style
+  const getBackgroundStyle = () => {
+    if (config.backgroundImage) {
+      return {
+        backgroundImage: `url(${config.backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      };
+    }
+    return {
+      background: `linear-gradient(135deg, ${config.backgroundColor || '#1a1a2e'} 0%, ${adjustBrightness(config.backgroundColor || '#1a1a2e', 20)} 100%)`,
+    };
+  };
+
   return (
     <div
       className="relative w-full h-screen overflow-hidden flex items-center justify-center"
-      style={{
-        background: `linear-gradient(135deg, ${config.backgroundColor} 0%, ${adjustBrightness(config.backgroundColor, 20)} 100%)`,
-      }}
+      style={getBackgroundStyle()}
     >
       {/* Phone Container */}
       <div className="relative w-full h-full max-w-[430px] max-h-[932px] flex flex-col">
         {/* Status Bar */}
-        <div className="flex justify-between items-center px-6 pt-4 text-white">
+        <div className="flex justify-between items-center px-6 pt-4 text-white drop-shadow-lg">
           <div className="flex items-center gap-1">
-            <Signal className="w-4 h-4" />
+            <Signal className="w-4 h-4" fill="currentColor" />
             <span className="text-xs font-semibold">5G</span>
           </div>
           <div className="flex items-center gap-2">
-            <Wifi className="w-4 h-4" />
-            <Battery className="w-6 h-3" />
+            <Wifi className="w-4 h-4" fill="currentColor" />
+            {/* Full Battery Icon */}
+            <div className="relative w-6 h-3 border-[1.5px] border-white rounded-[2px] flex items-center">
+              <div className="absolute inset-[1.5px] bg-white rounded-[1px]"></div>
+              <div className="absolute -right-[2px] top-1/2 -translate-y-1/2 w-[1.5px] h-[6px] bg-white rounded-r-[1px]"></div>
+            </div>
           </div>
         </div>
 
         {/* Lock Screen Clock */}
         <div className="flex-1 flex flex-col justify-start items-center pt-20 text-white">
-          <div className="text-xl font-medium opacity-90">{currentDate}</div>
-          <div className="text-8xl font-thin mt-2 tracking-tight">{currentTime}</div>
+          <div className="text-xl font-medium opacity-90 drop-shadow-lg">{currentDate}</div>
+          <div className="text-8xl font-thin mt-2 tracking-tight drop-shadow-2xl">{currentTime}</div>
         </div>
 
         {/* Notification Banner */}
