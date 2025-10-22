@@ -1,0 +1,123 @@
+{
+  "personaA": {
+    "1": {
+      "userName": "Sarah Chen",
+      "message": "Hey! Are you free for coffee tomorrow?",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
+      "backgroundColor": "#1a1a2e",
+      "appName": "WhatsApp"
+    },
+    "2": {
+      "userName": "Sarah Chen",
+      "message": "Don't forget about the meeting at 3pm!",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
+      "backgroundColor": "#0f3460",
+      "appName": "WhatsApp"
+    },
+    "3": {
+      "userName": "Sarah Chen",
+      "message": "Just sent you those files you needed 📎",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
+      "backgroundColor": "#16213e",
+      "appName": "WhatsApp"
+    },
+    "4": {
+      "userName": "Sarah Chen",
+      "message": "Thanks for your help today! Really appreciate it 🙏",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
+      "backgroundColor": "#1e3a5f",
+      "appName": "WhatsApp"
+    }
+  },
+  "personaB": {
+    "1": {
+      "userName": "Marcus Johnson",
+      "message": "The project deadline has been moved to Friday",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
+      "backgroundColor": "#2d4a3e",
+      "appName": "WhatsApp"
+    },
+    "2": {
+      "userName": "Marcus Johnson",
+      "message": "Can you review the document I shared?",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
+      "backgroundColor": "#3a5a40",
+      "appName": "WhatsApp"
+    },
+    "3": {
+      "userName": "Marcus Johnson",
+      "message": "Great work on the presentation! 👏",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
+      "backgroundColor": "#344e41",
+      "appName": "WhatsApp"
+    },
+    "4": {
+      "userName": "Marcus Johnson",
+      "message": "Let's sync up before the client call",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
+      "backgroundColor": "#2f4538",
+      "appName": "WhatsApp"
+    }
+  },
+  "personaC": {
+    "1": {
+      "userName": "Priya Patel",
+      "message": "Did you see the news? This is huge! 🎉",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
+      "backgroundColor": "#4a1a3e",
+      "appName": "WhatsApp"
+    },
+    "2": {
+      "userName": "Priya Patel",
+      "message": "Running 10 minutes late, sorry!",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
+      "backgroundColor": "#5a2a4e",
+      "appName": "WhatsApp"
+    },
+    "3": {
+      "userName": "Priya Patel",
+      "message": "Can you send me that recipe you mentioned?",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
+      "backgroundColor": "#3d2645",
+      "appName": "WhatsApp"
+    },
+    "4": {
+      "userName": "Priya Patel",
+      "message": "Happy birthday! Hope you have an amazing day! 🎂",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
+      "backgroundColor": "#4e2a5e",
+      "appName": "WhatsApp"
+    }
+  },
+  "personaD": {
+    "1": {
+      "userName": "Alex Rivera",
+      "message": "Check out this link I found!",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
+      "backgroundColor": "#1a3a4a",
+      "appName": "WhatsApp"
+    },
+    "2": {
+      "userName": "Alex Rivera",
+      "message": "Are we still on for dinner tonight?",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
+      "backgroundColor": "#2a4a5a",
+      "appName": "WhatsApp"
+    },
+    "3": {
+      "userName": "Alex Rivera",
+      "message": "I just booked the tickets! ✈️",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
+      "backgroundColor": "#1a4a5a",
+      "appName": "WhatsApp"
+    },
+    "4": {
+      "userName": "Alex Rivera",
+      "message": "Thanks for the recommendation, loved it!",
+      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
+      "backgroundColor": "#2a3a4a",
+      "appName": "WhatsApp"
+    }
+  }
+}
+
