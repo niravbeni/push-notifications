@@ -1,123 +1,30 @@
 {
   "personaA": {
-    "1": {
-      "userName": "Sarah Chen",
-      "message": "Hey! Are you free for coffee tomorrow?",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
-      "backgroundImage": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "2": {
-      "userName": "Sarah Chen",
-      "message": "Don't forget about the meeting at 3pm!",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
-      "backgroundImage": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "3": {
-      "userName": "Sarah Chen",
-      "message": "Just sent you those files you needed 📎",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
-      "backgroundImage": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "4": {
-      "userName": "Sarah Chen",
-      "message": "Thanks for your help today! Really appreciate it 🙏",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
-      "backgroundImage": "https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80",
-      "appName": "WhatsApp"
-    }
+    "recipientName": "Elena",
+    "userName": "Dr. Thompson",
+    "message": "Hi Maya, it's Dr. Thompson from oncology. We've reviewed your results - the tumor is indeed hormone-receptive and fast-growing.\n\nI know you've been considering fertility preservation. That's an entirely valid choice, but I do want to make sure you understand the timeline. If we delay treatment for the egg retrieval cycle - that's about four weeks - there's a small but real risk that the cancer could progress to stage IV, which would change our treatment options significantly.\n\nOn the other hand, starting chemo right away could mean losing the ability to have biological children in the future. Take the weekend to think about what feels right for you. We'll need a decision before Monday so we can either start your chemo prep or refer you to fertility.",
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrThompson",
+    "redirectLink": "https://www.surveymonkey.com/r/9Z68HF9"
   },
   "personaB": {
-    "1": {
-      "userName": "Marcus Johnson",
-      "message": "The project deadline has been moved to Friday",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
-      "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "2": {
-      "userName": "Marcus Johnson",
-      "message": "Can you review the document I shared?",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
-      "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "3": {
-      "userName": "Marcus Johnson",
-      "message": "Great work on the presentation! 👏",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
-      "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "4": {
-      "userName": "Marcus Johnson",
-      "message": "Let's sync up before the client call",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcusJohnson",
-      "backgroundImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-      "appName": "WhatsApp"
-    }
+    "recipientName": "Reena",
+    "userName": "Dr. Patel",
+    "message": "Hi Sarah, Dr. Patel here. We've completed your genetic testing for the BRCA mutation.\n\nYou tested positive for BRCA1, which means you have an 87% lifetime risk of breast cancer and 44% risk of ovarian cancer. I know this is a lot to process.\n\nWe have options: prophylactic mastectomy and oophorectomy could reduce your cancer risk to nearly zero, but it's major surgery with permanent changes to your body. Or we can do intensive screening - MRIs every six months, mammograms, blood work.\n\nWith your family history, I lean toward recommending the surgery, but this is your body and your choice. Let's schedule a time next week to talk through everything in detail. You don't have to decide anything today.",
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrPatel",
+    "redirectLink": "https://www.surveymonkey.com/r/CM2QZDX"
   },
   "personaC": {
-    "1": {
-      "userName": "Priya Patel",
-      "message": "Did you see the news? This is huge! 🎉",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
-      "backgroundImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "2": {
-      "userName": "Priya Patel",
-      "message": "Running 10 minutes late, sorry!",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
-      "backgroundImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "3": {
-      "userName": "Priya Patel",
-      "message": "Can you send me that recipe you mentioned?",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
-      "backgroundImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "4": {
-      "userName": "Priya Patel",
-      "message": "Happy birthday! Hope you have an amazing day! 🎂",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaPatel",
-      "backgroundImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "appName": "WhatsApp"
-    }
+    "recipientName": "Cathy",
+    "userName": "Dr. Martinez",
+    "message": "Jessica, it's Dr. Martinez from nephrology. Your kidney function has declined faster than we hoped - you're now at stage 4 chronic kidney disease.\n\nWe need to start talking about dialysis preparation. If we wait until you're in crisis, we lose control of the situation. Starting dialysis before you're symptomatic gives you better outcomes and more energy.\n\nI know you were hoping to avoid this. The good news is you're still a strong candidate for transplant, and we can get you on the list now. Your sister mentioned she wants to be tested as a living donor - that could mean months or years less time on dialysis.\n\nLet's meet this Thursday to discuss the access surgery for dialysis and get the transplant workup started. I'm here to support you through this.",
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrMartinez",
+    "redirectLink": "https://www.surveymonkey.com/r/V532PPJ"
   },
   "personaD": {
-    "1": {
-      "userName": "Alex Rivera",
-      "message": "Check out this link I found!",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
-      "backgroundImage": "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "2": {
-      "userName": "Alex Rivera",
-      "message": "Are we still on for dinner tonight?",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
-      "backgroundImage": "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "3": {
-      "userName": "Alex Rivera",
-      "message": "I just booked the tickets! ✈️",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
-      "backgroundImage": "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&q=80",
-      "appName": "WhatsApp"
-    },
-    "4": {
-      "userName": "Alex Rivera",
-      "message": "Thanks for the recommendation, loved it!",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexRivera",
-      "backgroundImage": "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&q=80",
-      "appName": "WhatsApp"
-    }
+    "recipientName": "Angie",
+    "userName": "Dr. Chen",
+    "message": "Rachel, Dr. Chen here with your MRI results. I wish I had better news - the lesions in your brain are consistent with multiple sclerosis.\n\nThe good news is we caught this early. You're a candidate for the new disease-modifying therapy that can slow progression significantly. Without treatment, MS is unpredictable - you could have years of stability or rapid decline.\n\nThe medication requires twice-weekly injections and has some side effects - flu-like symptoms, possible liver issues we'll monitor. But clinical trials show it reduces relapses by 70% and slows disability progression.\n\nI know you were planning to start trying for a baby this year. We need to discuss that timeline because the medication isn't safe during pregnancy, but delaying treatment could mean more disease activity.\n\nCan you come in Friday so we can map out a treatment plan together?",
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrChen",
+    "redirectLink": "https://www.surveymonkey.com/r/V5GW9SV"
   }
 }
-

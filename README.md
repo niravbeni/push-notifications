@@ -1,13 +1,15 @@
-# Push Notification Mock PWA
+# iMessage Mock PWA
 
-An iOS lock screen notification mockup for UX testing. This app creates realistic-looking iPhone lock screens with customizable notifications that slide up from the bottom.
+An iPhone Messages interface mockup for UX testing. This app creates realistic-looking iMessage conversation screens with sliding message animations and interactive elements.
 
 ## Features
 
-- 🎨 **16 Unique Scenarios**: 4 personas × 4 variants each
-- 📱 **iOS Lock Screen UI**: Authentic-looking iPhone lock screen with real-time clock
-- 🎬 **Animated Notifications**: Smooth slide-up animation with notification sound
-- 🎯 **Fully Responsive**: Works on all screen sizes and browsers
+- 📱 **Full iPhone Messages UI**: Authentic-looking iMessage interface
+- 🎬 **Sliding Message Animation**: Message bubbles slide in smoothly
+- 🔊 **Notification Sound**: WhatsApp-style notification sound on message arrival
+- ✨ **Pulsating Text Input**: Interactive text input that prompts user interaction
+- 🔗 **Clickable Redirects**: Text input redirects to custom URLs per persona
+- 📐 **Fully Responsive**: Works on all screen sizes and browsers
 - ⚙️ **Easy Configuration**: Single JSON file for all content
 - 🚫 **No Backend**: Completely static, easy to deploy
 
@@ -25,7 +27,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see all available routes.
+Open [http://localhost:3000](http://localhost:3000) to see all available personas.
 
 ### Build for Production
 
@@ -36,43 +38,33 @@ npm start
 
 ## URL Structure
 
-All notification screens follow this pattern:
+The app now has **4 simple URLs** - one for each persona:
 
-```
-/[persona]/[variant]
-```
-
-### Available URLs
-
-- **Persona A**: `/personaA/1`, `/personaA/2`, `/personaA/3`, `/personaA/4`
-- **Persona B**: `/personaB/1`, `/personaB/2`, `/personaB/3`, `/personaB/4`
-- **Persona C**: `/personaC/1`, `/personaC/2`, `/personaC/3`, `/personaC/4`
-- **Persona D**: `/personaD/1`, `/personaD/2`, `/personaD/3`, `/personaD/4`
+- `/personaA` - Sarah Chen (Coffee invitation)
+- `/personaB` - Marcus Johnson (Project deadline)
+- `/personaC` - Priya Patel (Exciting news)
+- `/personaD` - Alex Rivera (Dinner plans)
 
 ## Customization
 
 ### Editing Content
 
-All notification content is stored in `config/notifications.json`. Edit this file to customize:
+All conversation content is stored in `config/notifications.json`. Edit this file to customize:
 
-- **userName**: Name displayed in the notification
-- **message**: Message text
-- **avatarUrl**: URL to avatar image (currently using DiceBear API)
-- **backgroundColor**: Hex color for the lock screen background
-- **appName**: App name shown in notification (e.g., "WhatsApp")
+- **userName**: Name displayed in conversation
+- **message**: The message text
+- **avatarUrl**: URL to avatar image (using DiceBear API)
+- **redirectLink**: Where the text input redirects when clicked
 
 Example:
 
 ```json
 {
   "personaA": {
-    "1": {
-      "userName": "Sarah Chen",
-      "message": "Hey! Are you free for coffee tomorrow?",
-      "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
-      "backgroundColor": "#1a1a2e",
-      "appName": "WhatsApp"
-    }
+    "userName": "Sarah Chen",
+    "message": "Hey! Are you free for coffee tomorrow?",
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
+    "redirectLink": "https://example.com/personaA-response"
   }
 }
 ```
@@ -81,26 +73,64 @@ Example:
 
 You can replace the avatar URLs with:
 - Your own hosted images
-- Different DiceBear styles (change the URL)
-- Base64 encoded images
+- Different DiceBear styles
+- Local images in `/public` folder
 
 ### Notification Sound
 
-The app attempts to play a notification sound from `/public/notification.mp3`. 
+The app plays a notification sound from `/public/notification.mp3` when the message appears.
 
-**To add your own sound:**
-1. Find or create a notification sound (`.mp3` format recommended)
-2. Replace `/public/notification.mp3` with your sound file
-3. Keep the filename as `notification.mp3` or update the reference in `components/IOSHomeScreen.tsx`
+**To replace the sound:**
+1. Add your MP3 file to `/public/notification.mp3`
+2. Keep the filename as `notification.mp3`
 
-**Note**: Some browsers block autoplay audio. The sound may not play until the user interacts with the page.
+**Note**: Some browsers block autoplay audio. The sound may require user interaction first.
+
+### Redirect Links
+
+Each persona has a `redirectLink` that opens when the text input is clicked. Update these in the JSON config:
+
+```json
+"redirectLink": "https://your-custom-url.com"
+```
+
+This could link to:
+- Survey forms
+- Response pages
+- External websites
+- Other app routes
+
+## Features Breakdown
+
+### iMessage Interface
+
+- **Top Bar**: Back button, contact name with avatar, phone/video icons
+- **Message Area**: Received message bubble with sliding animation
+- **Bottom Bar**: Camera icon, pulsating text input, microphone icon
+
+### Animations
+
+1. **Message Slide-in**: Message bubble slides from left after 1 second
+2. **Pulsating Input**: Text input continuously pulsates to draw attention
+3. **Sound Effect**: Notification sound plays when message appears
+
+### Interactivity
+
+- **Text Input Click**: Redirects to the configured URL for each persona
+- **Responsive Layout**: Adapts to all screen sizes
 
 ## QR Code Generation
 
-For your UX testing scenario, you can generate QR codes for each URL using:
-- [QR Code Generator](https://www.qr-code-generator.com/)
-- [qrcode.react](https://www.npmjs.com/package/qrcode.react) for programmatic generation
-- Browser extensions
+For UX testing, generate QR codes for each persona URL:
+
+1. Use [QR Code Generator](https://www.qr-code-generator.com/)
+2. Generate codes for:
+   - `https://your-domain.com/personaA`
+   - `https://your-domain.com/personaB`
+   - `https://your-domain.com/personaC`
+   - `https://your-domain.com/personaD`
+
+See `QR_CODE_GUIDE.md` for detailed instructions.
 
 ## Deployment
 
@@ -110,13 +140,15 @@ This app can be deployed to any static hosting service:
 - **Netlify**: Connect your Git repository
 - **GitHub Pages**: Build and deploy the `out` folder
 
+See `DEPLOYMENT_GUIDE.md` for detailed deployment instructions.
+
 ## Technical Details
 
 - **Framework**: Next.js 16+ (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
+- **UI Components**: Lucide React icons
+- **Icons**: DiceBear API for avatars
 
 ## File Structure
 
@@ -124,16 +156,14 @@ This app can be deployed to any static hosting service:
 /
 ├── app/
 │   ├── [persona]/
-│   │   └── [variant]/
-│   │       └── page.tsx          # Dynamic route handler
+│   │   └── page.tsx              # Dynamic persona routes
 │   ├── layout.tsx                # Root layout
 │   ├── page.tsx                  # Homepage with all links
 │   └── globals.css               # Global styles
 ├── components/
-│   ├── IOSHomeScreen.tsx         # Main lock screen component
-│   └── NotificationBanner.tsx    # Notification component
+│   └── iMessageScreen.tsx        # Main Messages interface
 ├── config/
-│   └── notifications.json        # All notification content
+│   └── notifications.json        # All conversation content
 └── public/
     ├── manifest.json             # PWA manifest
     └── notification.mp3          # Notification sound
@@ -146,6 +176,12 @@ Tested and working on:
 - ✅ Safari (desktop & mobile)
 - ✅ Firefox (desktop & mobile)
 - ✅ Edge
+
+## Customization Tips
+
+1. **Change message timing**: Edit the `setTimeout` delay in `iMessageScreen.tsx` (line ~42)
+2. **Adjust pulsation speed**: Modify the animation duration in the CSS (line ~121)
+3. **Sound volume**: Change `audio.volume` value in `iMessageScreen.tsx` (line ~48)
 
 ## License
 

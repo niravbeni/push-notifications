@@ -1,100 +1,91 @@
 # Changelog
 
-## Latest Updates
+## Latest Updates - iMessage Interface Transformation
 
-### ✨ New Features Added
+### 🎨 Complete UI Overhaul
 
-#### 1. **Full Battery Icon**
-- Replaced outline battery icon with filled battery icon
-- More realistic iOS appearance
-- Shows fully charged battery state
+Transformed the app from iOS lock screen notifications to a full iPhone Messages (iMessage) interface.
 
-#### 2. **Background Wallpaper Support** 🎨
-- Now supports actual wallpaper images instead of just solid colors
-- Uses high-quality Unsplash images by default
-- All 16 screens now have beautiful nature/gradient wallpapers
-- Fallback to solid colors if no image is specified
+#### Major Changes
 
-**How to use:**
+**New Interface:**
+- Full iPhone Messages UI with authentic styling
+- Top bar with back button, contact name/avatar, and phone/video icons
+- Message area with sliding message bubbles
+- Bottom input bar with camera, pulsating text input, and microphone icons
+
+**Simplified URL Structure:**
+- **Before**: 16 URLs (`/personaA/1`, `/personaA/2`, etc.)
+- **After**: 4 URLs (`/personaA`, `/personaB`, `/personaC`, `/personaD`)
+
+**New Features:**
+- Pulsating text input animation to prompt user interaction
+- Clickable text input that redirects to custom URLs
+- Classic white Messages background (iOS style)
+- Sliding message bubble animation from left
+- Notification sound still plays on message arrival
+
+**Configuration Changes:**
+- Simplified JSON structure (removed variants)
+- Added `redirectLink` field for text input redirects
+- Removed `backgroundImage` field (no longer needed)
+
+### 📝 Files Created
+
+- `components/iMessageScreen.tsx` - New Messages interface component
+
+### 📝 Files Modified
+
+- `config/notifications.json` - Restructured to 4 personas (no variants)
+- `app/[persona]/page.tsx` - Moved from `[variant]` subfolder
+- `app/page.tsx` - Updated to show 4 persona links
+- `README.md` - Complete rewrite for iMessage interface
+- `scripts/list-urls.js` - Updated for new URL structure
+
+### 🗑️ Files Deleted
+
+- `app/[persona]/[variant]/` - Removed variant routing
+- `components/IOSHomeScreen.tsx` - Replaced with iMessage interface
+- `components/NotificationBanner.tsx` - No longer needed
+
+### 🎯 New Configuration Format
+
 ```json
 {
-  "backgroundImage": "https://images.unsplash.com/photo-xxxxx?w=800&q=80"
+  "personaA": {
+    "userName": "Sarah Chen",
+    "message": "Hey! Are you free for coffee tomorrow?",
+    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=SarahChen",
+    "redirectLink": "https://example.com/personaA-response"
+  }
 }
 ```
 
-Or use solid colors:
-```json
-{
-  "backgroundColor": "#1a1a2e"
-}
-```
+### ✨ Features
 
-#### 3. **Enhanced Text Visibility**
-- Added drop shadows to clock and date
-- Better readability on all background types
-- Works great with both images and colors
-
-#### 4. **WhatsApp Notification Sound Guide**
-- Comprehensive guide for adding iPhone WhatsApp notification sound
-- Multiple download options provided
-- Step-by-step instructions in `/public/NOTIFICATION_SOUND.md`
-
-### 🔧 Technical Improvements
-
-- **Image Optimization**: Added Unsplash to allowed image domains
-- **SVG Support**: Enabled safe SVG rendering for DiceBear avatars
-- **Viewport Configuration**: Fixed Next.js viewport warnings
-- **Type Safety**: Improved TypeScript interfaces for better dev experience
-- **Build Optimization**: Production build tested and verified
-
-### 📝 Documentation Updates
-
-- **CUSTOMIZATION_GUIDE.md**: Added extensive wallpaper customization section
-- **NOTIFICATION_SOUND.md**: Complete guide for WhatsApp sound
-- **README.md**: Updated feature list
-
-### 🎨 Default Wallpapers
-
-All 16 screens now include beautiful Unsplash wallpapers:
-- **Persona A**: Abstract gradients and geometric patterns
-- **Persona B**: Mountain and nature landscapes  
-- **Persona C**: Beach and coastal scenes
-- **Persona D**: Space and galaxy themes
-
-You can easily replace any of these with your own images!
-
-### 🚀 Ready for Deployment
-
-- ✅ Build tested successfully
-- ✅ All linter warnings fixed
-- ✅ Production-ready
-- ✅ Vercel deployment configured
+- Full iPhone Messages interface
+- Sliding message animation (1 second delay)
+- Pulsating text input (draws attention)
+- WhatsApp notification sound on message appear
+- Clickable text input redirects to custom URLs
+- Responsive design for all devices
 
 ---
 
-## How to Update
+## Previous Updates
 
-If you cloned the repository earlier:
+### ✨ Lock Screen Features (Stable Backup Branch)
 
-```bash
-git pull origin main
-npm install
-npm run dev
-```
+The original lock screen notification interface is preserved in the `stable-backup` branch.
 
-Your app now supports wallpapers and has a filled battery icon!
-
----
-
-## What's Next?
-
-Planned features (optional):
-- [ ] Custom app icons (instead of just WhatsApp)
-- [ ] Multiple notification types (calls, emails, etc.)
-- [ ] Dark mode support
-- [ ] Custom font options
+#### Features:
+- Full battery icon
+- Background wallpaper support (Unsplash images)
+- iOS lock screen with real-time clock
+- 16 notification screens (4 personas × 4 variants)
+- Notification slide-up animation
+- WhatsApp notification sound
 
 ---
 
 Last updated: October 22, 2025
-

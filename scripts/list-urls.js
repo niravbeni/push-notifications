@@ -6,22 +6,25 @@
  */
 
 const baseUrl = process.argv[2] || 'http://localhost:3000';
-const personas = ['personaA', 'personaB', 'personaC', 'personaD'];
-const variants = ['1', '2', '3', '4'];
+const personas = [
+  { id: 'personaA', name: 'Elena', desc: 'Coffee invitation' },
+  { id: 'personaB', name: 'Reena', desc: 'Project deadline' },
+  { id: 'personaC', name: 'Cathy', desc: 'Exciting news' },
+  { id: 'personaD', name: 'Angie', desc: 'Dinner plans' },
+];
 
-console.log('\n📱 Push Notification Mock PWA - All URLs\n');
-console.log('═'.repeat(50));
+console.log('\n💬 iMessage Mock PWA - All URLs\n');
+console.log('═'.repeat(60));
 
 personas.forEach(persona => {
-  console.log(`\n${persona.toUpperCase().replace('PERSONA', 'Persona ')}:`);
-  variants.forEach(variant => {
-    const url = `${baseUrl}/${persona}/${variant}`;
-    console.log(`  • Variant ${variant}: ${url}`);
-  });
+  const url = `${baseUrl}/${persona.id}`;
+  console.log(`\n${persona.name}`);
+  console.log(`  Message: ${persona.desc}`);
+  console.log(`  URL: ${url}`);
 });
 
-console.log('\n' + '═'.repeat(50));
-console.log(`\n📊 Total: ${personas.length * variants.length} unique URLs\n`);
+console.log('\n' + '═'.repeat(60));
+console.log(`\n📊 Total: ${personas.length} personas\n`);
 console.log('💡 To use with your deployed domain:');
 console.log('   node scripts/list-urls.js https://your-domain.com\n');
 

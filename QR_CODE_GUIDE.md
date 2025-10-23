@@ -1,6 +1,6 @@
 # QR Code Generation Guide
 
-For your UX testing scenario where participants scan QR codes to access different notification screens.
+Quick guide for creating QR codes for your iMessage mock PWA personas.
 
 ## Quick Method: Online QR Code Generator
 
@@ -12,52 +12,49 @@ Use any of these free services:
 
 ## URLs to Generate QR Codes For
 
-Once your app is deployed, create QR codes for these URLs:
+Once your app is deployed, create QR codes for these **4 URLs**:
 
-### Persona A
-- `https://your-domain.com/personaA/1`
-- `https://your-domain.com/personaA/2`
-- `https://your-domain.com/personaA/3`
-- `https://your-domain.com/personaA/4`
+### Persona URLs
 
-### Persona B
-- `https://your-domain.com/personaB/1`
-- `https://your-domain.com/personaB/2`
-- `https://your-domain.com/personaB/3`
-- `https://your-domain.com/personaB/4`
-
-### Persona C
-- `https://your-domain.com/personaC/1`
-- `https://your-domain.com/personaC/2`
-- `https://your-domain.com/personaC/3`
-- `https://your-domain.com/personaC/4`
-
-### Persona D
-- `https://your-domain.com/personaD/1`
-- `https://your-domain.com/personaD/2`
-- `https://your-domain.com/personaD/3`
-- `https://your-domain.com/personaD/4`
+- **Elena**: `https://your-domain.com/personaA`
+- **Reena**: `https://your-domain.com/personaB`
+- **Cathy**: `https://your-domain.com/personaC`
+- **Angie**: `https://your-domain.com/personaD`
 
 ## For Testing (localhost)
 
-During development, you can test with localhost URLs, but note that:
-- Participants need to be on the same network
-- Use your computer's IP address instead of `localhost`
-- Example: `http://192.168.1.100:3000/personaA/1`
+During development, you can test with localhost URLs:
 
-To find your IP address:
+**Note**: Participants need to be on the same network
+
+Use your computer's IP address instead of `localhost`:
+- Example: `http://192.168.1.100:3000/personaA`
+
+### Find your IP address:
 - **Mac**: System Settings → Network → Your Connection → Details
 - **Windows**: Open CMD and type `ipconfig`
+- **Or use**: `node scripts/list-urls.js http://YOUR-IP:3000`
 
-## Batch Generation Script
+## Generating QR Codes
 
-If you need to generate all 16 QR codes at once, you can use this Node.js script:
+### Online Method
+
+1. Go to one of the QR code generators above
+2. Select "URL" type
+3. Enter your persona URL (e.g., `https://your-domain.com/personaA`)
+4. Customize design if desired
+5. Download as PNG or SVG
+6. Repeat for all 4 personas
+
+### Batch Generation Script
+
+If you need to generate all 4 QR codes at once, you can use this Node.js script:
 
 ```bash
 npm install qrcode
 ```
 
-Create a file `generate-qr-codes.js`:
+Create `generate-qr-codes.js`:
 
 ```javascript
 const QRCode = require('qrcode');
@@ -65,8 +62,12 @@ const fs = require('fs');
 const path = require('path');
 
 const baseUrl = 'https://your-domain.com';
-const personas = ['personaA', 'personaB', 'personaC', 'personaD'];
-const variants = ['1', '2', '3', '4'];
+const personas = [
+  { id: 'personaA', name: 'Elena' },
+  { id: 'personaB', name: 'Reena' },
+  { id: 'personaC', name: 'Cathy' },
+  { id: 'personaD', name: 'Angie' },
+];
 
 const outputDir = './qr-codes';
 if (!fs.existsSync(outputDir)) {
@@ -74,17 +75,15 @@ if (!fs.existsSync(outputDir)) {
 }
 
 personas.forEach(persona => {
-  variants.forEach(variant => {
-    const url = `${baseUrl}/${persona}/${variant}`;
-    const filename = path.join(outputDir, `${persona}-${variant}.png`);
-    
-    QRCode.toFile(filename, url, {
-      width: 500,
-      margin: 2,
-    }, (err) => {
-      if (err) throw err;
-      console.log(`Generated: ${filename}`);
-    });
+  const url = `${baseUrl}/${persona.id}`;
+  const filename = path.join(outputDir, `${persona.name.toLowerCase()}.png`);
+  
+  QRCode.toFile(filename, url, {
+    width: 500,
+    margin: 2,
+  }, (err) => {
+    if (err) throw err;
+    console.log(`Generated: ${filename} → ${url}`);
   });
 });
 ```
@@ -93,16 +92,69 @@ Run: `node generate-qr-codes.js`
 
 ## Printing Tips
 
-- Print QR codes at least 2x2 inches (5x5 cm) for easy scanning
-- Test each QR code before printing final versions
-- Label each QR code with the persona and variant for your reference
-- Consider laminating for durability if using in physical spaces
+- **Size**: Print at least 2×2 inches (5×5 cm) for easy scanning
+- **Testing**: Scan each QR code before printing final versions
+- **Labels**: Add persona names below QR codes for easy identification
+- **Durability**: Consider laminating for physical UX testing scenarios
 
-## Testing QR Codes
+## QR Code Layout
+
+For your UX testing setup, you might want to create labels like:
+
+```
+┌─────────────────┐
+│                 │
+│   [QR CODE]     │
+│                 │
+├─────────────────┤
+│     Elena       │
+│ Coffee Invite   │
+└─────────────────┘
+```
+
+## Testing Checklist
 
 Before your UX session:
-1. Generate all 16 QR codes
-2. Test each one with multiple devices
-3. Verify the notification content is correct
-4. Check responsiveness on different screen sizes
 
+- [ ] Generate all 4 QR codes
+- [ ] Test each QR code with multiple devices
+- [ ] Verify correct persona loads
+- [ ] Check message appears correctly
+- [ ] Test text input redirect works
+- [ ] Print and laminate (if needed)
+
+## File Naming Convention
+
+Suggested naming for your QR code files:
+
+- `elena-qr.png` - Elena (personaA)
+- `reena-qr.png` - Reena (personaB)
+- `cathy-qr.png` - Cathy (personaC)
+- `angie-qr.png` - Angie (personaD)
+
+## Advanced: Custom QR Code Styling
+
+Many generators allow you to customize:
+- Colors (use your brand colors)
+- Add logo in center
+- Rounded corners
+- Pattern styles
+
+Just ensure the QR code remains scannable after customization!
+
+## Troubleshooting
+
+**QR code doesn't scan:**
+- Increase size (print larger)
+- Ensure good contrast
+- Check lighting conditions
+- Try different QR scanner apps
+
+**Wrong page loads:**
+- Verify URL in QR code is correct
+- Check for typos in domain
+- Ensure app is deployed and accessible
+
+**Need to update URLs:**
+- Simply regenerate QR codes with new URLs
+- No need to change the app code
