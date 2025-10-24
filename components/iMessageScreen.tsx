@@ -60,7 +60,7 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
   return (
     <div className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-white">
       {/* iPhone Container */}
-      <div className="relative w-full h-full max-w-[430px] max-h-[932px] flex flex-col bg-white">
+      <div className="relative w-full h-screen max-w-[430px] max-h-[932px] flex flex-col bg-white">
         {/* Top Bar */}
         <div className="flex items-center justify-between px-4 py-3 bg-[#f6f6f6] border-b border-gray-200">
           <button className="flex items-center gap-1 text-blue-500">
@@ -88,7 +88,7 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
         </div>
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto bg-white px-4 py-4">
+        <div className="flex-1 overflow-y-auto bg-white px-4 py-4 pb-32">
           <div
             className={`flex items-start gap-2 transition-all duration-500 ease-out ${
               showMessage ? 'translate-x-0 opacity-100' : '-translate-x-32 opacity-0'
@@ -117,8 +117,8 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
 
         {/* Bottom Input Area */}
         <div 
-          className="flex items-center gap-2 px-2 py-2 pb-32 bg-[#f6f6f6] border-t border-gray-200"
-          style={{ paddingBottom: 'max(128px, env(safe-area-inset-bottom))' }}
+          className="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto flex items-center gap-2 px-2 py-2 pb-24 bg-[#f6f6f6] border-t border-gray-200 z-10"
+          style={{ paddingBottom: 'max(96px, env(safe-area-inset-bottom))' }}
         >
           <button className="p-2">
             <Camera className="w-6 h-6 text-gray-600" />
