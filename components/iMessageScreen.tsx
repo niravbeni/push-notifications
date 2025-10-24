@@ -117,8 +117,8 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
 
         {/* Bottom Input Area */}
         <div 
-          className="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto flex items-center gap-2 px-2 py-2 pb-4 bg-[#f6f6f6] border-t border-gray-200 z-10"
-          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 16px)' }}
+          className="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto flex items-center gap-2 px-2 py-2 pb-2 bg-[#f6f6f6] border-t border-gray-200 z-10"
+          style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 8px)' }}
         >
           <button className="p-2">
             <Camera className="w-6 h-6 text-gray-600" />
