@@ -91,7 +91,7 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
         </div>
 
         {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto bg-white px-4 pt-[72px] pb-32">
+        <div className="flex-1 overflow-y-auto bg-white px-4 pb-32 pt-[72px]">
           <div
             className={`flex items-start gap-2 transition-all duration-500 ease-out ${
               showMessage ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
