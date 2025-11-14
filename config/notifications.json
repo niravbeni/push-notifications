@@ -1,30 +1,30 @@
 {
   "personaA": {
     "recipientName": "Elena",
-    "userName": "Dr. Thompson",
-    "message": "Hi Maya, it's Dr. Thompson from oncology. We've reviewed your results - the tumor is indeed hormone-receptive and fast-growing.\n\nI know you've been considering fertility preservation. That's an entirely valid choice, but I do want to make sure you understand the timeline. If we delay treatment for the egg retrieval cycle - that's about four weeks - there's a small but real risk that the cancer could progress to stage IV, which would change our treatment options significantly.\n\nOn the other hand, starting chemo right away could mean losing the ability to have biological children in the future. Take the weekend to think about what feels right for you. We'll need a decision before Monday so we can either start your chemo prep or refer you to fertility.",
-    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrThompson",
+    "userName": "(713) 555-6341",
+    "message": "You have 1 missed call.\n\nTranscript:\n\n\"Hello elena this is karen calling from the medical oncology team im calling to schedule your first chemo appointment i understand you were seeking counseling to decide whether you wanted to undergo fertility preservation treatment before the chemo starts as discussed given the stage of your cancer its very important to begin chemo as soon as possible to reduce the chances of progression please call me back on 713-555-6341 extension 231 as soon as possible\"",
+    "avatarUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23999'/%3E%3Ccircle cx='50' cy='35' r='15' fill='%23fff'/%3E%3Cpath d='M50,55 C35,55 25,65 25,75 L25,100 Q25,100 50,100 Q75,100 75,100 L75,75 C75,65 65,55 50,55 Z' fill='%23fff'/%3E%3C/svg%3E",
     "redirectLink": "https://www.surveymonkey.com/r/9Z68HF9"
   },
   "personaB": {
     "recipientName": "Reena",
-    "userName": "Dr. Patel",
-    "message": "Hi Sarah, Dr. Patel here. We've completed your genetic testing for the BRCA mutation.\n\nYou tested positive for BRCA1, which means you have an 87% lifetime risk of breast cancer and 44% risk of ovarian cancer. I know this is a lot to process.\n\nWe have options: prophylactic mastectomy and oophorectomy could reduce your cancer risk to nearly zero, but it's major surgery with permanent changes to your body. Or we can do intensive screening - MRIs every six months, mammograms, blood work.\n\nWith your family history, I lean toward recommending the surgery, but this is your body and your choice. Let's schedule a time next week to talk through everything in detail. You don't have to decide anything today.",
-    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrPatel",
+    "userName": "(212) 555-8472",
+    "message": "You have 1 missed call.\n\nTranscript:\n\n\"Hello reena this is sarah calling from dr matthews office have you scheduled your appointment with a medical oncologist yet we need that information to know where to send medical records depending on their systems they may need to initiate the request via fax we need to make sure all of this is done before your appointment so they have what they need to make the right treatment decision please call me back once youve spoken to their office so i can start whichever process they prefer sarah\"",
+    "avatarUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23999'/%3E%3Ccircle cx='50' cy='35' r='15' fill='%23fff'/%3E%3Cpath d='M50,55 C35,55 25,65 25,75 L25,100 Q25,100 50,100 Q75,100 75,100 L75,75 C75,65 65,55 50,55 Z' fill='%23fff'/%3E%3C/svg%3E",
     "redirectLink": "https://www.surveymonkey.com/r/CM2QZDX"
   },
   "personaC": {
     "recipientName": "Cathy",
-    "userName": "Dr. Martinez",
-    "message": "Jessica, it's Dr. Martinez from nephrology. Your kidney function has declined faster than we hoped - you're now at stage 4 chronic kidney disease.\n\nWe need to start talking about dialysis preparation. If we wait until you're in crisis, we lose control of the situation. Starting dialysis before you're symptomatic gives you better outcomes and more energy.\n\nI know you were hoping to avoid this. The good news is you're still a strong candidate for transplant, and we can get you on the list now. Your sister mentioned she wants to be tested as a living donor - that could mean months or years less time on dialysis.\n\nLet's meet this Thursday to discuss the access surgery for dialysis and get the transplant workup started. I'm here to support you through this.",
-    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrMartinez",
+    "userName": "(814) 415-9805",
+    "message": "You have 1 missed call.\n\nTranscript:\n\n\"Hi cathy this is dr nichols im calling about your genetic test results can you give me a call back please im on 814-415-9805 extension 21 thank you\"",
+    "avatarUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23999'/%3E%3Ccircle cx='50' cy='35' r='15' fill='%23fff'/%3E%3Cpath d='M50,55 C35,55 25,65 25,75 L25,100 Q25,100 50,100 Q75,100 75,100 L75,75 C75,65 65,55 50,55 Z' fill='%23fff'/%3E%3C/svg%3E",
     "redirectLink": "https://www.surveymonkey.com/r/V532PPJ"
   },
   "personaD": {
     "recipientName": "Angie",
-    "userName": "Dr. Chen",
-    "message": "Rachel, Dr. Chen here with your MRI results. I wish I had better news - the lesions in your brain are consistent with multiple sclerosis.\n\nThe good news is we caught this early. You're a candidate for the new disease-modifying therapy that can slow progression significantly. Without treatment, MS is unpredictable - you could have years of stability or rapid decline.\n\nThe medication requires twice-weekly injections and has some side effects - flu-like symptoms, possible liver issues we'll monitor. But clinical trials show it reduces relapses by 70% and slows disability progression.\n\nI know you were planning to start trying for a baby this year. We need to discuss that timeline because the medication isn't safe during pregnancy, but delaying treatment could mean more disease activity.\n\nCan you come in Friday so we can map out a treatment plan together?",
-    "avatarUrl": "https://api.dicebear.com/7.x/avataaars/svg?seed=DrChen",
+    "userName": "Tony",
+    "message": "Hi Mama,\n\nI think I've found a potential new doctor who looks really good. She's based at Emory, maybe a 45 mins drive from you?\n\nI can get you scheduled for after Christmas but that would mean more treatment delays. Do you want to wait or go with your current doc so you can get on those meds straight away?",
+    "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=T&backgroundColor=93c5fd&textColor=ffffff",
     "redirectLink": "https://www.surveymonkey.com/r/V5GW9SV"
   }
 }

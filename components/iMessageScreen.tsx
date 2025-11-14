@@ -16,6 +16,9 @@ interface IMessageScreenProps {
 export default function IMessageScreen({ config }: IMessageScreenProps) {
   const [currentTime, setCurrentTime] = useState('');
   const [showMessage, setShowMessage] = useState(false);
+  
+  // Determine if this is a voicemail (phone number) or a message (named contact)
+  const isVoicemail = config.userName.startsWith('(');
 
   useEffect(() => {
     // Update time
@@ -65,7 +68,7 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
         <div className="fixed top-0 left-0 right-0 max-w-[430px] mx-auto flex items-center justify-between px-4 py-3 bg-[#f6f6f6] border-b border-gray-200 z-10">
           <button className="flex items-center gap-1 text-blue-500">
             <ChevronLeft className="w-6 h-6" />
-            <span className="text-base">Messages</span>
+            <span className="text-base">{isVoicemail ? 'Voicemails' : 'Messages'}</span>
           </button>
           
           <div className="flex items-center gap-2">
@@ -91,7 +94,7 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
         <div className="flex-1 overflow-y-auto bg-white px-4 pt-20 pb-32">
           <div
             className={`flex items-start gap-2 transition-all duration-500 ease-out ${
-              showMessage ? 'translate-x-0 opacity-100' : '-translate-x-32 opacity-0'
+              showMessage ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'
             }`}
           >
             {/* Avatar */}
@@ -108,7 +111,15 @@ export default function IMessageScreen({ config }: IMessageScreenProps) {
             {/* Message Bubble */}
             <div className="flex flex-col gap-1 max-w-[70%]">
               <div className="relative bg-[#e5e5ea] rounded-2xl rounded-tl-sm px-4 py-2">
-                <p className="text-base text-gray-900">{config.message}</p>
+                <p className="text-base text-gray-900 whitespace-pre-line">
+                  {config.message.split(/(Transcript:)/).map((part, index) => 
+                    part === 'Transcript:' ? (
+                      <span key={index} className="text-gray-500">{part}</span>
+                    ) : (
+                      <span key={index}>{part}</span>
+                    )
+                  )}
+                </p>
               </div>
               <span className="text-xs text-gray-500 ml-2">{currentTime}</span>
             </div>
