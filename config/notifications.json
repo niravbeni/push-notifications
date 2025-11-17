@@ -2,21 +2,21 @@
   "personaA": {
     "recipientName": "Elena",
     "userName": "(713) 555-6341",
-    "message": "You have 1 missed call.\n\nTranscript:\n\n\"Hello elena this is karen calling from the medical oncology team im calling to schedule your first chemo appointment i understand you were seeking counseling to decide whether you wanted to undergo fertility preservation treatment before the chemo starts as discussed given the stage of your cancer its very important to begin chemo as soon as possible to reduce the chances of progression please call me back on 713-555-6341 extension 231 as soon as possible\"",
+    "message": "You have 1 missed call.\n\nTranscript:\n\nHello Elena,\n\nThis is Karen calling from the medical oncology team.\n\nI'm calling to schedule your first chemo appointment.\n\nI understand you were seeking counseling to decide whether you wanted to undergo fertility preservation treatment before the chemo starts.\n\nAs discussed, given the stage of your cancer, it's very important to begin chemo as soon as possible to reduce the chances of progression.\n\nPlease call me back on 713-555-6341 extension 231 as soon as possible.",
     "avatarUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23999'/%3E%3Ccircle cx='50' cy='35' r='15' fill='%23fff'/%3E%3Cpath d='M50,55 C35,55 25,65 25,75 L25,100 Q25,100 50,100 Q75,100 75,100 L75,75 C75,65 65,55 50,55 Z' fill='%23fff'/%3E%3C/svg%3E",
     "redirectLink": "https://www.surveymonkey.com/r/9Z68HF9"
   },
   "personaB": {
     "recipientName": "Reena",
     "userName": "(212) 555-8472",
-    "message": "You have 1 missed call.\n\nTranscript:\n\n\"Hello reena this is sarah calling from dr matthews office have you scheduled your appointment with a medical oncologist yet we need that information to know where to send medical records depending on their systems they may need to initiate the request via fax we need to make sure all of this is done before your appointment so they have what they need to make the right treatment decision please call me back once youve spoken to their office so i can start whichever process they prefer sarah\"",
+    "message": "You have 1 missed call.\n\nTranscript:\n\nHello Reena,\n\nThis is Sarah calling from Dr Matthews's office.\n\nHave you scheduled your appointment with a medical oncologist yet? We need that information to know where to send medical records. Depending on their systems, they may need to initiate the request via fax. We need to make sure all of this is done before your appointment so they have what they need to make the right treatment decision.\n\nPlease call me back once you've spoken to their office so I can start whichever process they prefer.\n\nSarah",
     "avatarUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23999'/%3E%3Ccircle cx='50' cy='35' r='15' fill='%23fff'/%3E%3Cpath d='M50,55 C35,55 25,65 25,75 L25,100 Q25,100 50,100 Q75,100 75,100 L75,75 C75,65 65,55 50,55 Z' fill='%23fff'/%3E%3C/svg%3E",
     "redirectLink": "https://www.surveymonkey.com/r/CM2QZDX"
   },
   "personaC": {
     "recipientName": "Cathy",
     "userName": "(814) 415-9805",
-    "message": "You have 1 missed call.\n\nTranscript:\n\n\"Hi cathy this is dr nichols im calling about your genetic test results can you give me a call back please im on 814-415-9805 extension 21 thank you\"",
+    "message": "You have 1 missed call.\n\nTranscript:\n\nHi Cathy\n\nThis is Dr. Nichols. I'm calling about your genetic test results. Can you give me a call back please. I'm on 814-415-9805 extension 21.\n\nThank you",
     "avatarUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23999'/%3E%3Ccircle cx='50' cy='35' r='15' fill='%23fff'/%3E%3Cpath d='M50,55 C35,55 25,65 25,75 L25,100 Q25,100 50,100 Q75,100 75,100 L75,75 C75,65 65,55 50,55 Z' fill='%23fff'/%3E%3C/svg%3E",
     "redirectLink": "https://www.surveymonkey.com/r/V532PPJ"
   },
